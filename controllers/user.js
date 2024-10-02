@@ -29,7 +29,8 @@ const userControllers = {
             if (isValid) {
                 const token = jwt.sign(
                     { email: emailExist.email },
-                    process.env.TOKEN_SECRET
+                    process.env.TOKEN_SECRET,
+                    { expiresIn: '1h' } 
                 );
 
                 if (token) {

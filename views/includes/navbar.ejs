@@ -1,22 +1,37 @@
-<nav>
-    <ul>
-        <li><a href="/api/flights">Home</a></li>
-        <% if(token) {%>
-            <li><a href="/api/add-flight">Add New Flight</a></li>
+
+
+<nav class="navbar">
+    <div class="container">
+        <a href="/api/flights" class="logo"><img src="/img/logo-removebg-preview.png" alt="logo" class="logo-img">FlightAPI</a>
+        <ul class="nav-links">
+     
+            <li><a href="/api/flights">Flights</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <ul class="nav-links">
+                <% if (!token) { %>
+                <li>   <a href="/api/login">Login</a></li>
+            <li><a href="/api/register">Register New Account</a></li>
+            <% } else { %>
+                <li>
+                    <a href="/api/add-flight">Add New Flight</a></li>
             <li>
+
                 <form action="/api/logout" method="POST">
                     <button type="submit">Logout</button>
                 </form>
             </li>
-            <% }else { %>
-
-                <li><a href="/api/login">Login</a></li>
-                <li><a href="/api/register">Register New Account</a></li>
-
-
-                <% } %>
-      
-      
-  
-    </ul>
+          </ul>
+         
+              
+       
+             
+         
+         
+            <% } %>
+        </div>
+    </div>
 </nav>
+

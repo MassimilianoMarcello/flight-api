@@ -46,7 +46,7 @@ class Flight {
         const newFlight={
             id:Id(),
             ...flight}
-            flight.push(newFlight)
+            flights.push(newFlight)
             return flight
         }
     }

@@ -7,8 +7,9 @@
             <li><strong>To:</strong> <%= flight.arrive %></li>
             <li><strong>Price:</strong> €<%= flight.price.toFixed(2) %></li>
             <li><strong>Leaving at:</strong> <%= flight.time %></li>
-      
-        
+            <li><form action="/api/delete/<%= flight.id %>?_method=DELETE" method="POST">
+                <button type="submit">Delete Flight</button>
+            </form></li>
         </ul>
     </div>
 

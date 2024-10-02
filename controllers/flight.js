@@ -66,6 +66,29 @@ const flightControllers = {
         }
     },
 
+    deleteFlight: (req, res) => {
+        const flightId = req.params.id;
+        const flightExist = Flight.getById(flightId);
+    
+        if (flightExist) {
+            try {
+                Flight.deleteFlight(flightId); // Usa la funzione statica del modello per eliminare
+                res.redirect('/api/flights'); // Redirect dopo l'eliminazione
+            } catch (error) {
+                console.error("Error deleting flight:", error);
+                res.status(500).render('error', {
+                    title: 'Error',
+                    message: 'There was a problem deleting the flight.'
+                });
+            }
+        } else {
+            res.status(404).render('404', {
+                title: '404 Page',
+                message: 'Flight not found' // Cambiato "Movie" in "Flight"
+            });
+        }
+    }
+
 
 
 };

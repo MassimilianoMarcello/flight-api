@@ -49,6 +49,16 @@ class Flight {
             flights.push(newFlight)
             return flight
         }
-    }
+   
+
+        static deleteFlight(id) {
+            const index = flights.findIndex(flight => flight.id === id); // Assicurati che l'ID sia una stringa
+            if (index !== -1) {
+                flights.splice(index, 1); // Rimuove il volo dall'array
+                return true; // volo rimosso con successo
+            }
+            return false; // volo non trovato
+        }
+}
 
 export default Flight

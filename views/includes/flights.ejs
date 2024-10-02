@@ -1,0 +1,27 @@
+<div class="flight-list">
+    <h2>Our Flights</h2>
+  
+    <table>
+        <thead>
+            <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Price</th>
+                <th>Leaving at</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% flights.forEach(flight => { %>
+                <tr>
+                    <td><%= flight.departure %></td>
+                    <td><%= flight.arrive %></td>
+                    <td>€<%= flight.price.toFixed(2) %></td>
+                    <td><%= flight.time.toFixed(2) %></td>
+                    <td><a href="/api/flights/<%= flight.id %>" class="view-product-btn">Details</a></td>
+              
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>

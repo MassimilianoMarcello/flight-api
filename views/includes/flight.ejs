@@ -1,0 +1,20 @@
+<div class="flight-detail">
+    <h2>Flight Details</h2>
+    <h1><% flight.title %></h1>
+    <div class="flight-info">
+        <ul>
+            <li><strong>From:</strong> <%= flight.departure %></li>
+            <li><strong>To:</strong> <%= flight.arrive %></li>
+            <li><strong>Price:</strong> €<%= flight.price.toFixed(2) %></li>
+            <li><strong>Leaving at:</strong> <%= flight.time %></li>
+      
+        
+        </ul>
+    </div>
+
+    <div class="flight">
+        <a href="/api/flights/">
+            <button>Flights List</button>
+        </a>
+    </div>
+</div>

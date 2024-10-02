@@ -1,0 +1,22 @@
+<nav>
+    <ul>
+        <li><a href="/api/flights">Home</a></li>
+        <% if(token) {%>
+            <li><a href="/api/add-flight">Add New Flight</a></li>
+            <li>
+                <form action="/api/logout" method="POST">
+                    <button type="submit">Logout</button>
+                </form>
+            </li>
+            <% }else { %>
+
+                <li><a href="/api/login">Login</a></li>
+                <li><a href="/api/register">Register New Account</a></li>
+
+
+                <% } %>
+      
+      
+  
+    </ul>
+</nav>

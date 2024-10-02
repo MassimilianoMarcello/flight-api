@@ -34,8 +34,7 @@ const userControllers = {
                 );
 
                 if (token) {
-                    // { httpOnly: true }: This option makes the cookie HTTP-only, which means the cookie cannot be accessed or modified via client-side JavaScript. It helps increase security by protecting the token from potential XSS (Cross-Site Scripting) attacks.
-
+                    
                     res.cookie('token', token, { httpOnly: true });
                     res.status(200).redirect('/api/flights');
                 }

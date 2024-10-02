@@ -628,3 +628,13 @@
 2024-10-02 13:51:03 ------ GET ----- /api/flights/7ed349dc-a7bb-4230-8426-dfe397b0255b
 2024-10-02 13:51:05 ------ DELETE ----- /api/delete/7ed349dc-a7bb-4230-8426-dfe397b0255b?_method=DELETE
 2024-10-02 13:51:05 ------ GET ----- /api/flights
+2024-10-02 13:53:14 ------ GET ----- /api/flights
+2024-10-02 13:53:18 ------ DELETE ----- /api/delete/b069903b-f71e-4012-85ae-57ccb541822e?_method=DELETE
+2024-10-02 13:53:18 ------ GET ----- /api/flights
+2024-10-02 13:53:36 ------ GET ----- /api/flights
+2024-10-02 13:54:10 ------ GET ----- /api/flights
+2024-10-02 13:54:12 ------ DELETE ----- /api/delete/7db0dc31-3438-4769-aba3-ec939b8d535a?_method=DELETE
+2024-10-02 13:54:12 ------ GET ----- /api/flights
+2024-10-02 13:54:15 ------ GET ----- /api/flights/635f2e44-7c64-46ad-837d-aa168b98a376
+2024-10-02 13:54:17 ------ DELETE ----- /api/delete/635f2e44-7c64-46ad-837d-aa168b98a376?_method=DELETE
+2024-10-02 13:54:17 ------ GET ----- /api/flights

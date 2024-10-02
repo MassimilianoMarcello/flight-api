@@ -40,17 +40,34 @@ const flightControllers = {
         });
     },
     addFlight: (req, res) => {
-        const { departure, time, arrive, price } = req.body; // Estract data from form
-        const newFlight = {
-            departure,
-           price: parseFloat(price),
-            time,
-            arrive
-        };
+        try {
+            const { departure, time, arrive, price } = req.body;
 
-        Flight.Add(newFlight); // Add a new flight
-        res.redirect('/api/flights'); // redirect to all flights
-    }
+            // Basic validation (optional)
+            if (!departure || !time || !arrive || isNaN(price)) {
+                return res.status(400).render('layout', {
+                    title: 'Add Flight',
+                    body: 'includes/addFlightForm',
+                    error: 'All fields are required and price must be a number.'
+                });
+            }
+
+            const newFlight = {
+                departure,
+                price: parseFloat(price),
+                time,
+                arrive
+            };
+
+            Flight.Add(newFlight); // Add the new flight to the system
+            res.redirect('/api/flights');
+        } catch (error) {
+            res.status(500).render('500', { title: 'Server Error', message: 'Unable to add flight.' });
+        }
+    },
+
+
+
 };
 
 export default flightControllers;

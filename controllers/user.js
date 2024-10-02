@@ -85,7 +85,7 @@ const userControllers = {
 
     logout: (req, res) => {
         res.clearCookie('token');
-        res.status(200).redirect('/api/products');
+        res.status(200).redirect('/api/flights');
     }
 };
 

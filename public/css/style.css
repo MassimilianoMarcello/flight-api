@@ -217,33 +217,40 @@ tbody tr:hover {
 
 
 /* Form Styles */
-.flight-form {
+.flight-form,.register-form,.login-form {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
-    max-width: 600px;
-    margin: 20px auto;
+    min-width: 600px;
+    margin: 10rem auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
 }
 
 .form-group {
     margin-bottom: 15px;
+
 }
 
 .form-group label {
     display: block;
     font-weight: 500;
     margin-bottom: 5px;
+    padding: 15px;
     color: #333;
+
 }
 
 .form-group input {
-    width: 100%;
+    width: 80%;
+    margin: 1rem;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
     transition: border-color 0.3s;
+    
+
 }
 
 .form-group input:focus {
@@ -257,12 +264,13 @@ tbody tr:hover {
     font-size: 16px;
     font-weight: 600;
     color: #fff;
-    background-color: #28a745;
+    background-color: #6c28a7;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 10px;
+ 
 }
 
 .submit-btn:hover {
@@ -319,4 +327,39 @@ tbody tr:hover {
 
 .footer-links a:hover {
     text-decoration: underline;
+}
+
+
+/* general button */
+
+.retour-button {
+    background-color: #007bff; 
+    color: #ffffff; 
+    border: none; 
+    padding: 10px 20px; 
+    margin: 0 auto;
+    font-size: 16px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-align: center; 
+    text-decoration: none; 
+    transition: background-color 0.3s ease; 
+}
+
+.retour-button:hover {
+    background-color: #0056b3; 
+}
+
+.retour-button a {
+    color: #ffffff;
+    text-decoration: none; 
+}
+
+.about-page{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+    color: #007bff;
+    font-size: 6rem;
 }

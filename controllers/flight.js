@@ -84,7 +84,7 @@ const flightControllers = {
         } else {
             res.status(404).render('404', {
                 title: '404 Page',
-                message: 'Flight not found' // Cambiato "Movie" in "Flight"
+                message: 'Flight not found' 
             });
         }
     }
